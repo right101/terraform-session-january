@@ -5,7 +5,7 @@ output "instance_ip_address" {
     description = "The public IP address of main EC2 instance" 
 }
 
-output "instance_ip_address" {
+output "instance_state" {
     value       = aws_instance.main.instance_state
     description = "The instance state of the main EC2 instance" 
 }
