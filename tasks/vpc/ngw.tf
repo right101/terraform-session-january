@@ -1,0 +1,8 @@
+resource "aws_nat_gateway" "main" {
+  allocation_id = aws_eip.elastic.id
+  connectivity_type = "private"
+  subnet_id         = aws_subnet.public_subnet_1.id
+  tags = {
+    Name = "main"
+  }
+}
