@@ -8,7 +8,7 @@ resource "aws_security_group" "task_sg" {
     from_port        = var.port_a 
     to_port          = var.port_a
     protocol         = var.protocol
-    cidr_blocks      = var.cidr_blocks
+    cidr_blocks      = [var.cidr_blocks]
     
   }
 
@@ -17,7 +17,7 @@ resource "aws_security_group" "task_sg" {
     from_port        = var.port_b
     to_port          = var.port_b
     protocol         = var.protocol
-    cidr_blocks      = var.cidr_blocks
+    cidr_blocks      = [var.cidr_blocks]
     
   }
 
@@ -26,7 +26,7 @@ ingress {
     from_port        = var.port_c
     to_port          = var.port_c
     protocol         = var.protocol
-    cidr_blocks      = var.cidr_blocks
+    cidr_blocks      = [var.cidr_blocks]
     
   }
 
@@ -35,7 +35,7 @@ ingress {
     from_port        = var.port_d
     to_port          = var.port_d
     protocol         = var.protocol
-    cidr_blocks      = var.cidr_blocks
+    cidr_blocks      = [var.cidr_blocks]
     
   }
 
@@ -43,7 +43,7 @@ ingress {
     from_port        = 0
     to_port          = 0
     protocol         = "-1"
-    cidr_blocks      = var.cidr_blocks
+    cidr_blocks      = [var.cidr_blocks]
    
   }
 }
