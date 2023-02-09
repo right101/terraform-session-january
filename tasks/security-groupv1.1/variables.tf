@@ -39,12 +39,6 @@ variable "protocol" {
     description = "this is for protocol"
     default  = "tcp"
 }
-variable "protocol_a" {
-    type = string
-    description = "this is for protocol"
-    default  = "0"
-}
-
 variable "port_e" {
     type = string
     description = "this is for "
@@ -54,4 +48,25 @@ variable "port_f" {
     type = string
     description = "this is for "
     default  = "510"
+}
+
+variable "port_g" {
+    type = string
+    description = "this is for "
+    default  = "511"
+}
+variable "port_h" {
+    type = string
+    description = "this is for "
+    default  = "512"
+}
+variable "port_i" {
+    type = string
+    description = "this is for "
+    default  = "513"
+}
+variable "port_j" {
+    type = string
+    description = "this is for "
+    default  = "514"
 }
