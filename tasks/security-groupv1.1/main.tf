@@ -38,6 +38,14 @@ ingress {
     cidr_blocks      = [var.cidr_blocks]
     
   }
+  ingress {
+    description      = "this is to open 10 ports"
+    from_port        = var.port_e
+    to_port          = var.port_f
+    protocol         = var.protocol_a
+    cidr_blocks      = [var.cidr_blocks]
+    
+  }
 
   egress {
     from_port        = 0

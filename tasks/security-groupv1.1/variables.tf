@@ -39,3 +39,19 @@ variable "protocol" {
     description = "this is for protocol"
     default  = "tcp"
 }
+variable "protocol_a" {
+    type = string
+    description = "this is for protocol"
+    default  = "-1"
+}
+
+variable "port_e" {
+    type = string
+    description = "this is for "
+    default  = "500"
+}
+variable "port_f" {
+    type = string
+    description = "this is for "
+    default  = "510"
+}
