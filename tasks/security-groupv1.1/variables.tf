@@ -42,7 +42,7 @@ variable "protocol" {
 variable "protocol_a" {
     type = string
     description = "this is for protocol"
-    default  = "-1"
+    default  = "0"
 }
 
 variable "port_e" {
