@@ -39,14 +39,54 @@ ingress {
     
   }
   ingress {
-    description      = "this is to open 10 ports"
+    description      = "this open port ${var.port_e}"
     from_port        = var.port_e
-    to_port          = var.port_f
-    protocol         = var.protocol_a
+    to_port          = var.port_e
+    protocol         = var.protocol
     cidr_blocks      = [var.cidr_blocks]
     
   }
 
+   ingress {
+    description      = "this open port ${var.port_f}"
+    from_port        = var.port_f
+    to_port          = var.port_f
+    protocol         = var.protocol
+    cidr_blocks      = [var.cidr_blocks]
+    
+  }
+   ingress {
+    description      = "this open port ${var.port_g}"
+    from_port        = var.port_g
+    to_port          = var.port_g
+    protocol         = var.protocol
+    cidr_blocks      = [var.cidr_blocks]
+    
+  }
+ ingress {
+    description      = "this open port ${var.port_h}"
+    from_port        = var.port_h
+    to_port          = var.port_h
+    protocol         = var.protocol
+    cidr_blocks      = [var.cidr_blocks]
+    
+  }
+   ingress {
+    description      = "this open port ${var.port_i}"
+    from_port        = var.port_i
+    to_port          = var.port_i
+    protocol         = var.protocol
+    cidr_blocks      = [var.cidr_blocks]
+    
+  }
+   ingress {
+    description      = "this open port ${var.port_j}"
+    from_port        = var.port_j
+    to_port          = var.port_j
+    protocol         = var.protocol
+    cidr_blocks      = [var.cidr_blocks]
+    
+  }
   egress {
     from_port        = 0
     to_port          = 0
