@@ -18,15 +18,15 @@ variable "vpc_id" {
 variable "availability_zone" {
     type = string
     description = "this is for AZ-1a"
-    default  = "${var.env}-1a"
+    default  = "${var}-1a"
 }
 variable "availability_zone" {
     type = string
     description = "this is for AZ-1b"
-    default  = "${var.env}-1b"
+    default  = "${var}-1b"
 }
 variable "availability_zone" {
     type = string
     description = "this is for AZ-1c"
-    default  = "${var.env}-1c"
+    default  = "${var}-1c"
 }
