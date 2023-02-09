@@ -8,5 +8,5 @@ variable "instance_type" {
 variable "env" {
     type = string
     description = "Indicates the environment"
-    default = "prod"
+    default = "dev"
 }
