@@ -15,17 +15,17 @@ variable "vpc_id" {
     description = "this is for vpc"
     default  = "aws_vpc.main.id"
 }
-variable "availability_zone" {
+variable "availability_zone_a" {
     type = string
     description = "this is for AZ-1a"
     default  = "us-east-1a"                
 }                                          
-variable "availability_zone" {
+variable "availability_zone_b" {
     type = string
     description = "this is for AZ-1b"
     default  = "us-east-1b"
 }
-variable "availability_zone" {
+variable "availability_zone_c" {
     type = string
     description = "this is for AZ-1c"
     default  = "us-east-1c"

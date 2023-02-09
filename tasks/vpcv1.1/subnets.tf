@@ -1,7 +1,7 @@
 resource "aws_subnet" "public_subnet_1" {
   vpc_id     = var.vpc_id  
   cidr_block = "10.0.1.0/24"
-  availability_zone = "${var}-1a"
+  availability_zone_a = "${var}-1a"
   tags = {
     Name = "Public-subnet-1"
   }
@@ -9,7 +9,7 @@ resource "aws_subnet" "public_subnet_1" {
 resource "aws_subnet" "public_subnet_2" {
   vpc_id     = var.vpc_id    
   cidr_block = "10.0.2.0/24"
-  availability_zone = "${var}-1b"            
+  availability_zone_b = "${var}-1b"            
   tags = {
     Name = "Public-subnet-2"
   }
@@ -18,7 +18,7 @@ resource "aws_subnet" "public_subnet_2" {
 resource "aws_subnet" "public_subnet_3" {
   vpc_id     = var.vpc_id    
   cidr_block = "10.0.3.0/24"
-  availability_zone = "${var}-1c"
+  availability_zone_c = "${var}-1c"
   tags = {
     Name = "Public-subnet-3"
   }
@@ -26,7 +26,7 @@ resource "aws_subnet" "public_subnet_3" {
 resource "aws_subnet" "private_subnet_1" {
   vpc_id     = var.vpc_id    
   cidr_block = "10.0.11.0/24"
-  availability_zone = "${var}-1a"
+  availability_zone_a = "${var}-1a"
   tags = {
     Name = "Private-subnet-1"
   }
@@ -34,7 +34,7 @@ resource "aws_subnet" "private_subnet_1" {
 resource "aws_subnet" "private_subnet_2" { 
   vpc_id     = var.vpc_id    
   cidr_block = "10.0.12.0/24"
-  availability_zone = "${var}-1b"
+  availability_zone_b = "${var}-1b"
   tags = {
     Name = "Private-subnet-2"
   }
@@ -42,7 +42,7 @@ resource "aws_subnet" "private_subnet_2" {
 resource "aws_subnet" "private_subnet_3" {
   vpc_id     = var.vpc_id    
   cidr_block = "10.0.13.0/24"
-  availability_zone = "${var}-1c"
+  availability_zone_c = "${var}-1c"
   tags = {
     Name = "Private-subnet-3"
 } 
