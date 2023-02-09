@@ -3,7 +3,7 @@ resource "aws_instance" "first_ec2" {
   instance_type = var.instance_type
   vpc_security_group_ids = [aws_security_group.main.id] # a list of strings # dynamic reference
   tags = {  # a map
-     Name = var.env-instance
+     Name = "${var.env}-instance" # half is variable and half is hardcoded and it is in double quotation
   }
 }
 resource "aws_instance" "first_ec2_frontend" {
@@ -11,6 +11,6 @@ resource "aws_instance" "first_ec2_frontend" {
   instance_type = var.instance_type
   vpc_security_group_ids = [aws_security_group.main.id] # a list of strings # dynamic reference
   tags = {  # a map
-     Name = var.env-frontend-instance
+     Name = "${var.env}-frontend-instance" # 
   }
 }
