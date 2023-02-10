@@ -5,41 +5,13 @@ variable "env" {
     description = "Indicates the environment"
     default = "task"
 }
-variable "public_subnet_1" {
+variable "subnet" {
     type = string
     description = "name for my subnet"
-    default = "Public-subnet-1"
+    default = "subnet"
 }
 
-variable "public_subnet_2" {
-    type = string
-    description = "name for my subnet"
-    default = "Public-subnet-2"   
-}
 
-variable "public_subnet_3" {
-    type = string 
-    description = "name for my subnet"
-    default = "Public-subnet-3"
- }
-
-variable "private_subnet_1" {
-    type = string
-    description = "name for my subnet"
-    default = "Private-subnet-1"
-}
-
-variable "private_subnet_2" {
-    type = string 
-    description = "name for my subnet"
-    default = "Private-subnet-2"
-}
-
-variable "private_subnet_3" {
-    type = string 
-    description = "name for my subnet"
-    default =  "Private-subnet-3"
-}
 
 # Here variables start with cider blocks
 

@@ -3,7 +3,7 @@ resource "aws_subnet" "public_subnet_1" {
   cidr_block = var.cidr_block_public_a
   availability_zone = var.availability_zone_a
   tags = {
-    Name = format("%s-subnet", var.public-1)
+    Name = format("%s-public", var.subnet-1)
   }
 }
 
@@ -12,7 +12,7 @@ resource "aws_subnet" "public_subnet_2" {
   cidr_block = var.cidr_block_public_b
   availability_zone = var.availability_zone_b            
   tags = {
-    Name = format("%s-subnet", var.public-2)
+    Name = format("%s-public", var.subnet-2)
   }
 }
 
@@ -21,7 +21,7 @@ resource "aws_subnet" "public_subnet_3" {
   cidr_block = var.cidr_block_public_c
   availability_zone = var.availability_zone_c
   tags = {
-    Name = format("%s-subnet", var.public-3)
+    Name = format("%s-public", var.subnet-3)
   }
 }
 
@@ -30,7 +30,7 @@ resource "aws_subnet" "private_subnet_1" {
   cidr_block = var.cidr_block_private_a
   availability_zone = var.availability_zone_a
   tags = {
-    Name = format("%s-subnet", var.private-1)
+    Name = format("%s-private", var.subnet-1)
   }
 }
 
@@ -39,7 +39,7 @@ resource "aws_subnet" "private_subnet_2" {
   cidr_block = var.cidr_block_private_b
   availability_zone = var.availability_zone_b
   tags = {
-    Name = format("%s-subnet", var.private-2)
+    Name = format("%s-private", var.subnet-2)
   }
 }
 
@@ -48,7 +48,7 @@ resource "aws_subnet" "private_subnet_3" {
   cidr_block = var.cidr_block_private_c
   availability_zone = var.availability_zone_c
   tags = {
-    Name = format("%s-subnet", var.private-3)
+    Name = format("%s-private", var.subnet-3)
 } 
 }
 #cv
