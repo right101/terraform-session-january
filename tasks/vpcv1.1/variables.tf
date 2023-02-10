@@ -15,32 +15,32 @@ variable "vpc_id" {
     description = "this is for vpc"
     default  = "aws_vpc.main.id"
 }
-variable "availability_zone_id1" {
+variable "availability_zone_id" {
     type = string
     description = "this is for AZ-1a"
     default  = "use1-az2"                
 }                                          
-variable "availability_zone_id2" {
+variable "availability_zone_id" {
     type = string
     description = "this is for AZ-1b"
     default  = "use1-az4"
 }
-variable "availability_zone_id3" {
+variable "availability_zone_id" {
     type = string
     description = "this is for AZ-1c"
     default  = "use1-az6"
 }
-variable "availability_zone_id4" {
+variable "availability_zone_id" {
     type = string
     description = "this is for AZ-1a"
     default  = "use1-az2"
 }
-variable "availability_zone_id5" {
+variable "availability_zone_id" {
     type = string
     description = "this is for AZ-1b"
     default  = "use1-az4"
 }
-variable "availability_zone_id6" {
+variable "availability_zone_id" {
     type = string
     description = "this is for AZ-1c"
     default  = "use1-az6"
