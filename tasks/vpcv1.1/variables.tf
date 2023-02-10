@@ -1,14 +1,48 @@
+# Here variables start with names
+
 variable "env" {
     type = string
     description = "Indicates the environment"
     default = "task"
 }
-variable "tags" {
+variable "public_subnet_1" {
     type = map 
     default = {
         Name = "Public-subnet-1"
     }
 }
+variable "public_subnet_2" {
+    type = map 
+    default = {
+        Name = "Public-subnet-2"
+    }
+}
+variable "public_subnet_3" {
+    type = map 
+    default = {
+        Name = "Public-subnet-3"
+    }
+}
+variable "private_subnet_1" {
+    type = map 
+    default = {
+        Name = "Private-subnet-1"
+    }
+}
+variable "private_subnet_2" {
+    type = map 
+    default = {
+        Name = "Private-subnet-2"
+    }
+}
+variable "private_subnet_3" {
+    type = map 
+    default = {
+        Name = "Private-subnet-3"
+    }
+}
+# Here variables start with cider blocks
+
 variable "vpc_cidr_block" {
     type = string
     description = "this is for cidr_block"
@@ -44,11 +78,8 @@ variable "cidr_block_private_c" {
     description = "this is for cidr_block for public subnet a"
     default  = "10.0.13.0/24"
 }
-variable "vpc_id" {
-    type = string
-    description = "this is for vpc"
-    default  = "aws_vpc.main.id"
-}
+#Here variables start with availability zones
+
 variable "availability_zone_a" {
     type = string
     description = "this is for AZ-1a"

@@ -1,54 +1,54 @@
 resource "aws_subnet" "public_subnet_1" {
-  vpc_id     = var.vpc_id  
+  vpc_id     = aws_vpc.main.id  
   cidr_block = var.cidr_block_public_a
   availability_zone = var.availability_zone_a
   tags = {
-    Name = "var.tags"
+    Name = format("%s-public", var.subnet-1)
   }
 }
 
 resource "aws_subnet" "public_subnet_2" {
-  vpc_id     = var.vpc_id    
+  vpc_id     = aws_vpc.main.id  
   cidr_block = var.cidr_block_public_b
   availability_zone = var.availability_zone_b            
   tags = {
-    Name = "Public-subnet-2"
+    Name = format("%s-public", var.subnet-2)
   }
 }
 
 resource "aws_subnet" "public_subnet_3" {
-  vpc_id     = var.vpc_id    
+  vpc_id     = aws_vpc.main.id   
   cidr_block = var.cidr_block_public_c
   availability_zone = var.availability_zone_c
   tags = {
-    Name = "Public-subnet-3"
+    Name = format("%s-public", var.subnet-3)
   }
 }
 
 resource "aws_subnet" "private_subnet_1" {
-  vpc_id     = var.vpc_id    
+  vpc_id     = aws_vpc.main.id   
   cidr_block = var.cidr_block_private_a
   availability_zone = var.availability_zone_a
   tags = {
-    Name = "Private-subnet-1"
+    Name = format("%s-private", var.subnet-1)
   }
 }
 
 resource "aws_subnet" "private_subnet_2" { 
-  vpc_id     = var.vpc_id    
+  vpc_id     = aws_vpc.main.id  
   cidr_block = var.cidr_block_private_b
   availability_zone = var.availability_zone_b
   tags = {
-    Name = "Private-subnet-2"
+    Name = format("%s-private", var.subnet-2)
   }
 }
 
 resource "aws_subnet" "private_subnet_3" {
-  vpc_id     = var.vpc_id    
+  vpc_id     = aws_vpc.main.id   
   cidr_block = var.cidr_block_private_c
   availability_zone = var.availability_zone_c
   tags = {
-    Name = "Private-subnet-3"
+    Name = format("%s-private", var.subnet-3)
 } 
 }
 #cv
