@@ -7,32 +7,32 @@ variable "env" {
 }
 variable "public_subnet_1" {
     type = string
-    default = "subnet1"
+    default = "Public-subnet-1"
 }
 
 variable "public_subnet_2" {
     type = string
-    default = "subnet2"   
+    default = "Public-subnet-2"   
 }
 
 variable "public_subnet_3" {
     type = string 
-    default = "subnet3"
+    default = "Public-subnet-3"
  }
 
 variable "private_subnet_1" {
     type = string
-    default = "subnet1"
+    default = "Private-subnet-1"
 }
 
 variable "private_subnet_2" {
     type = string 
-    default = "subnet2"
+    default = "Private-subnet-2"
 }
 
 variable "private_subnet_3" {
     type = string 
-    default =  "subnet3"
+    default =  "Private-subnet-3"
 }
 
 # Here variables start with cider blocks
