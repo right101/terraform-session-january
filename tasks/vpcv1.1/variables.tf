@@ -18,15 +18,15 @@ variable "vpc_id" {
 variable "availability_zone_a" {
     type = string
     description = "this is for AZ-1a"
-    default  = "us-east-1a"                
+    default  = "us-east-1d"                
 }                                          
 variable "availability_zone_b" {
     type = string
     description = "this is for AZ-1b"
-    default  = "us-east-1b"
+    default  = "us-east-1e"
 }
 variable "availability_zone_c" {
     type = string
     description = "this is for AZ-1c"
-    default  = "us-east-1c"
+    default  = "us-east-1f"
 }
