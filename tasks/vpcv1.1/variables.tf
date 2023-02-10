@@ -15,32 +15,32 @@ variable "vpc_id" {
     description = "this is for vpc"
     default  = "aws_vpc.main.id"
 }
-variable "availability_zone_id" {
+variable "public_subnet_1" {
     type = string
     description = "this is for AZ-1a"
     default  = "use1-az2"                
 }                                          
-variable "availability_zone_id" {
+variable "public_subnet_2" {
     type = string
     description = "this is for AZ-1b"
     default  = "use1-az4"
 }
-variable "availability_zone_id" {
+variable "public_subnet_3" {
     type = string
     description = "this is for AZ-1c"
     default  = "use1-az6"
 }
-variable "availability_zone_id" {
+variable "private_subnet_1" {
     type = string
     description = "this is for AZ-1a"
     default  = "use1-az2"
 }
-variable "availability_zone_id" {
+variable "private_subnet_2" {
     type = string
     description = "this is for AZ-1b"
     default  = "use1-az4"
 }
-variable "availability_zone_id" {
+variable "private_subnet_3" {
     type = string
     description = "this is for AZ-1c"
     default  = "use1-az6"
