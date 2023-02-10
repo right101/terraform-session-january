@@ -6,41 +6,35 @@ variable "env" {
     default = "task"
 }
 variable "public_subnet_1" {
-    type = map 
-    default = {
-        Name = "Public-subnet-1"
-    }
+    type = string
+    default = "Public-subnet-1"
 }
+
 variable "public_subnet_2" {
-    type = map 
-    default = {
-        Name = "Public-subnet-2"
-    }
+    type = string
+    default = "Public-subnet-2"   
 }
+
 variable "public_subnet_3" {
-    type = map 
-    default = {
-        Name = "Public-subnet-3"
-    }
-}
+    type = string 
+    default = "Public-subnet-3"
+ }
+
 variable "private_subnet_1" {
-    type = map 
-    default = {
-        Name = "Private-subnet-1"
-    }
+    type = string
+    default = "Private-subnet-1"
 }
+
 variable "private_subnet_2" {
-    type = map 
-    default = {
-        Name = "Private-subnet-2"
-    }
+    type = string 
+    default = "Private-subnet-2"
 }
+
 variable "private_subnet_3" {
-    type = map 
-    default = {
-        Name = "Private-subnet-3"
-    }
+    type = string 
+    default =  "Private-subnet-3"
 }
+
 # Here variables start with cider blocks
 
 variable "vpc_cidr_block" {
