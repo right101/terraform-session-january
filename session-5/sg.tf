@@ -9,7 +9,7 @@ resource "aws_security_group_rule" "ingress" {
   protocol          = "tcp"
   from_port         = element( var.ports, 0) #22
   security_group_id = aws_security_group.main.id
-  cidr_blocks       = [""]
+  cidr_blocks       = ["0.0.0.0/0"]
 }
 resource "aws_security_group_rule" "egress" {
   type              = "egress"
