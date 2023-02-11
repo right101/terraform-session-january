@@ -35,6 +35,11 @@ variable "Public" {
     description = "name for my public name"
     default = "Public"
 }
+variable "Private" {
+    type = string
+    description = "name for my private name"
+    default = "Private"
+}
 
 # Here variables start with cider blocks
 
