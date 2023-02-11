@@ -6,3 +6,4 @@ resource "aws_instance" "first_ec2" {
      Name = "${var.env}-instance" # half is variable and half is hardcoded and it is in double quotation
      
 }
+}
