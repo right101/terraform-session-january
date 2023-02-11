@@ -15,13 +15,26 @@ variable "Public_rt" {
     description = "name for my public rt"
     default = "Public_rt"
 }
+variable "Private_rt" {
+    type = string
+    description = "name for my private rt"
+    default = "Private_rt"
+}
 variable "main_igw" {
     type = string
     description = "name for my igw"
     default = "main_igw"
 }
-
-
+variable "main_ngw" {
+    type = string
+    description = "name for my ngw"
+    default = "main_ngw"
+}
+variable "Public" {
+    type = string
+    description = "name for my public name"
+    default = "Public"
+}
 
 # Here variables start with cider blocks
 
@@ -30,9 +43,9 @@ variable "vpc_cidr_block" {
     description = "this is for cidr_block"
     default  = "10.0.0.0/16"
 }
-variable "cidr_block_public_rt" {
+variable "cidr_block_rt" {
     type = string
-    description = "this is for cidr_block"
+    description = "this is for route table cidr_block"
     default  = "0.0.0.0/0"
 }
 variable "cidr_block_public_a" {
