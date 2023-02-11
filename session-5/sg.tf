@@ -7,11 +7,11 @@ resource "aws_security_group" "main" {
   }
 }
 resource "aws_security_group_rule" "ingress" {
-  count = 2
+  count = length(var.ports) # it will count legth of ports in the list in variables.tf
   type              = "ingress"
-  to_port           = element( var.ports, count.index) #22
+  to_port           = element( var.ports, count.index) #22,80,3306
   protocol          = "tcp"
-  from_port         = element( var.ports, count.index) #22
+  from_port         = element( var.ports, count.index) #22,80,3306
   security_group_id = aws_security_group.main.id
   cidr_blocks       = ["0.0.0.0/0"]
 }
