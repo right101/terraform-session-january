@@ -51,7 +51,7 @@ resource "aws_subnet" "private_subnet_3" {
     Name = format("%s-private-3", var.subnet)
 } 
 }
-#cv
+
 
       #Here I created 3 privite subnets and 3 public subnets assoiated with VPC
        #${var.port_a} #"${var.env}-frontend-instance" # "${var.env}-instance" 

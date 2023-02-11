@@ -5,10 +5,15 @@ variable "env" {
     description = "Indicates the environment"
     default = "task"
 }
-variable "subnet" {
+variable "Public_rt" {
     type = string
-    description = "name for my subnet"
-    default = "subnet"
+    description = "name for my public rt"
+    default = "Public_rt"
+}
+variable "main_ig" {
+    type = string
+    description = "name for my ig"
+    default = "main_ig"
 }
 
 
@@ -19,6 +24,11 @@ variable "vpc_cidr_block" {
     type = string
     description = "this is for cidr_block"
     default  = "10.0.0.0/16"
+}
+variable "cidr_block_public_rt" {
+    type = string
+    description = "this is for cidr_block"
+    default  = "0.0.0.0/0"
 }
 variable "cidr_block_public_a" {
     type = string
