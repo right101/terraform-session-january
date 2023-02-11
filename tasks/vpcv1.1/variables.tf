@@ -5,15 +5,20 @@ variable "env" {
     description = "Indicates the environment"
     default = "task"
 }
+variable "subnet" {
+    type = string
+    description = "name for my subnet"
+    default = "subnet"
+}
 variable "Public_rt" {
     type = string
     description = "name for my public rt"
     default = "Public_rt"
 }
-variable "main_ig" {
+variable "main_igw" {
     type = string
-    description = "name for my ig"
-    default = "main_ig"
+    description = "name for my igw"
+    default = "main_igw"
 }
 
 
