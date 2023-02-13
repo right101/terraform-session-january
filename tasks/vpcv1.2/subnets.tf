@@ -1,6 +1,6 @@
 
 resource "aws_subnet" "public_subnet" {
-  count = length(var.availability_zones) # it will count legth of ports in the list in variables.tf
+  count = length(var.availability_zones, var.public_subnet_cidr_blocks) # it will count legth of ports in the list in variables.tf
   vpc_id     = aws_vpc.main.id  
   cidr_block = element(var.public_subnet_cidr_blocks, count.index)
   availability_zone = element(var.availability_zones, count.index)
@@ -12,7 +12,7 @@ resource "aws_subnet" "public_subnet" {
 
 
 resource "aws_subnet" "private_subnet" {
-   count = length(var.availability_zones) # it will count legth of ports in the list in variables.tf
+   count = length(var.availability_zones, var.private_subnet_cidr_blocks) # it will count legth of ports in the list in variables.tf
   vpc_id     = aws_vpc.main.id  
   cidr_block = element(var.private_subnet_cidr_blocks, count.index)
   availability_zone = element(var.availability_zones, count.index)

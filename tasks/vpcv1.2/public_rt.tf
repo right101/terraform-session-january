@@ -17,7 +17,7 @@ resource "aws_internet_gateway" "main" {
   }
 }
 resource "aws_route_table_association" "task1" {
-  subnet_id      = aws_subnet.public_subnet[count.index]
+  subnet_id      = aws_subnet.public_subnet.id
   route_table_id = aws_route_table.public.id
 }
 

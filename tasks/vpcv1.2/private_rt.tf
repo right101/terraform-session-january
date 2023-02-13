@@ -11,7 +11,7 @@ resource "aws_route_table" "private" {
 resource "aws_nat_gateway" "main" {
   allocation_id = aws_eip.elastic.id
   connectivity_type = "public"
-  subnet_id         = aws_subnet.public_subnet[count.index]
+  subnet_id         = aws_subnet.public_subnet.id
   tags = {
     Name = var.main_ngw
   }
