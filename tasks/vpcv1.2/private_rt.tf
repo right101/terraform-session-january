@@ -11,7 +11,7 @@ resource "aws_route_table" "private" {
 resource "aws_nat_gateway" "main" {
   allocation_id = aws_eip.elastic.id
   connectivity_type = "public"
-  subnet_id         = aws_subnet.public_subnet_1.id
+  subnet_id         = aws_subnet.public_subnet.id
   tags = {
     Name = var.main_ngw
   }
@@ -19,16 +19,10 @@ resource "aws_nat_gateway" "main" {
 resource "aws_eip" "elastic" {
   vpc      = true
 }
-resource "aws_route_table_association" "d" {
-  subnet_id      = aws_subnet.private_subnet_1.id
+resource "aws_route_table_association" "task" {
+  subnet_id      = aws_subnet.private_subnet.id
   route_table_id = aws_route_table.private.id
 }
 
-resource "aws_route_table_association" "e" {
-  subnet_id      = aws_subnet.private_subnet_2.id
-  route_table_id = aws_route_table.private.id
-}
-resource "aws_route_table_association" "f" {
-  subnet_id      = aws_subnet.private_subnet_3.id
-  route_table_id = aws_route_table.private.id
+
 }
