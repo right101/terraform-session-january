@@ -20,7 +20,8 @@ resource "aws_eip" "elastic" {
   vpc      = true
 }
 resource "aws_route_table_association" "task2" {
-  subnet_id      = aws_subnet.private_subnet[2].id
+  count = 3
+  subnet_id      = aws_subnet.private_subnet[count.index].id
   route_table_id = aws_route_table.private.id
 }
 
