@@ -2,7 +2,7 @@ resource "aws_security_group" "task_sg" {
     name        = var.name
     description = "Allow inbound traffic" 
     vpc_id      = var.vpc_id
-
+}
 resource "aws_security_group_rule" "ingress" {
   count = length(var.task_ports) # it will count legth of ports in the list in variables.tf
   type              = "ingress"
