@@ -17,6 +17,7 @@ locals {
         Environment = var.env
         Team = var.team
         App = var.app
-        Managed_By = 
+        Managed_by = var.managed_by
+        Owner = var.owner
     }
 }
