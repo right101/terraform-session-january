@@ -7,7 +7,7 @@ resource "aws_launch_template" "task_template" {
 }
 
 resource "aws_autoscaling_group" "task_asg" {
-  count              = 3  
+  count              = length(var.availability_zones) 
   name               = "aws-${var.team}-${var.env}-${var.app}-task_asg-${var.index}"  
   availability_zones = element(var.availability_zones, count.index)
   desired_capacity   = 2
