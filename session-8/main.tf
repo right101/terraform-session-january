@@ -11,7 +11,7 @@ resource "aws_instance" "main" {
         connection {
             type = "ssh"
             user = "ec2-user"
-            host = self.public.ip
+            host = self.public_ip
             private_key = file("~/.ssh/id_rsa")
         }
     }
