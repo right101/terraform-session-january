@@ -11,6 +11,14 @@ resource "aws_security_group" "main" {
     cidr_blocks      = ["0.0.0.0/0"] # list of string
     
   }
+  ingress {
+    description      = "TLS from VPC"
+    from_port        = 80 # single value
+    to_port          = 80 
+    protocol         = "tcp" #string, one thing only
+    cidr_blocks      = ["0.0.0.0/0"] # list of string
+    
+  }
    egress {
     from_port        = 0
     to_port          = 0
