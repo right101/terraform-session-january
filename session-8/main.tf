@@ -38,7 +38,7 @@ output "instance_ip" {
     value = aws_instance.main.public_ip
 }
 
-resource "nul_resource" "local_script" {
+resource "null_resource" "local_script" {
    provisioner "local-exec" {
      command = "echo 'Hello from the Local Server' >> local.txt"
    }  
