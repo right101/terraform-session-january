@@ -8,7 +8,7 @@ module "ec2_instance" {
   env = "dev"
   ami = "ami-0aa7d40eeae50c9a9"
   instance_type = "t2.micro"
-  sg = [module.ec2_sg.main_sg_id]  ## module.module_name.attribute
+  sg = [module.ec2_sg.main_sg_id]  ## #module.module_name.Output_Name
 }
 module "ec2_sg" {
   source = "../../modules/sg"
@@ -16,4 +16,3 @@ module "ec2_sg" {
 }
 #you always reference to child module outputs
 
-#module.module_name.Output_Name
